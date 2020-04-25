@@ -1,0 +1,300 @@
+/* ---- General Layout ---- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper,
+.main-nav nav ul {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #2572aa;
+}
+
+p {
+  font-size: 1.25em;
+  padding-left: .5em;
+  padding-right: 1em;
+  padding-bottom: 2.5em;
+  text-align: center;
+}
+
+img {
+  max-width: 95%;
+}
+
+/* ---- Header ---- */
+h1 {
+  padding-top: .75em;
+  padding-bottom: .75em;
+}
+
+li {
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.20em;
+}
+
+a:hover {
+  color: #2572aa;
+}
+
+.intro,
+.thank-you figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 1.5em;
+}
+
+header img {
+  width: 250px;
+  height: 153px;
+}
+
+.intro p {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+/* ---- Portfolio ---- */
+.portfolio-wrapper {
+  background-color: #fff;
+}
+
+.portfolio {
+  padding-top: 1em;
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 900;
+  padding-top: 1.5em;
+  padding-bottom: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+  padding-top: 1.25em;
+  padding-bottom: .75em;
+}
+
+/* ---- Thank You ---- */
+.thank-you {
+  border-top: 4px solid #808080;
+  background-color: #fff;
+}
+
+.thank-you figure {
+  padding: 0 0 1em 0;
+}
+
+.thank-you img {
+  max-width: 60%;
+  margin-bottom: 1.5em;
+}
+
+/* ---- Footer ---- */
+.footer-section {
+  background-color: #f8f8f8;
+}
+
+.phone-number,
+.email {
+  font-weight: 700;
+}
+
+footer {
+  border-top: 1px solid #808080;
+  padding: 2em .75em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-nav {
+  display: none;
+}
+
+.name,
+.top {
+  font-size: 1em;
+  font-weight: 900;
+}
+
+.top a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.top a:hover {
+  color: #2572aa;
+}
+
+
+/* ---- Media Queries ---- */
+@media only screen and (min-width: 768px) {
+
+  /* ---- Header 768px ---- */
+  header {
+    margin-bottom: 1.5em;
+  }
+  .main-nav nav ul {
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+  }
+
+  nav li {
+   background-color: #f8f8f8;
+   padding-right: 2.5em;
+  }
+
+  .intro {
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .intro figure {
+    order: 2;
+  }
+
+  .intro p {
+    width: 60%;
+    padding-top: 0;
+    padding-right: 2em;
+    text-align: left;
+  }
+
+  /* ---- Portfolio 768px---- */
+  .portfolio-wrapper {
+    width: 95%;
+    margin: auto;
+  }
+
+  .portfolio {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .portfolio section {
+    max-width: 50%;
+    height: 425px;
+  }
+
+  /* ---- Thank you 768px---- */
+  .thank-you {
+    width: 95%;
+    margin: auto;
+  }
+
+  .thank-you img {
+    max-width: 450px;
+  }
+
+  /* ---- Footer 768px---- */
+  .footer-section p {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  footer {
+    padding-left: 1em;
+  }
+
+  .top {
+    display: none;
+  }
+
+  .footer-nav {
+    display: flex;
+ }
+
+ .footer-nav ul {
+   display: flex;
+   flex-direction: row;
+   list-style-type: none;
+   font-size: .75em;
+ }
+
+ .footer-nav li {
+   padding-top: 0;
+ }
+
+
+@media only screen and (min-width: 1024px) {
+    .wrapper {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* ---- Header 1024px ---- */
+    .main-nav {
+      display: flex;
+      justify-content: space-between;
+      width: 95%;
+      margin: auto;
+    }
+
+    .main-nav h1 {
+      padding-left: .75em;
+    }
+
+    .main-nav nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-nav li {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .main-nav li:last-child {
+      padding-right: 1em;
+    }
+
+    .intro p {
+      padding-left: 0;
+    }
+
+    /* ---- Portfolio 1024px ---- */
+    .portfolio section {
+      max-width: 33%;
+    }
+}
